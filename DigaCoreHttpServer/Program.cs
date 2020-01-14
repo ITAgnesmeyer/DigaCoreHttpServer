@@ -8,7 +8,7 @@ namespace DigaCoreHttpServer
         {
             string currentPath = Environment.CurrentDirectory;
             Console.WriteLine("path:" + currentPath);
-            using (SimpleHttpServer server = new SimpleHttpServer(currentPath))
+            using (SimpleHttpServer server = new SimpleHttpServer(currentPath,5001))
             {
                 Console.WriteLine("Press ctl-Q to exit!");
                 Console.CancelKeyPress+=OnCancelKeyPress;

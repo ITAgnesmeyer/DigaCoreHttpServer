@@ -80,6 +80,7 @@ namespace DigaCoreHttpServer
                 {".xml", "text/xml"},
                 {".xpi", "application/x-xpinstall"},
                 {".zip", "application/zip"},
+                {".wasm", "application/wasm" },
 
                 #endregion
             };
@@ -247,7 +248,7 @@ namespace DigaCoreHttpServer
                     context.Response.StatusCode = (int) HttpStatusCode.OK;
                     context.Response.OutputStream.Flush();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
                 }
